@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazing music</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <header>
+        <nav class=" flex justify-between items-center">
+            <a href="#" class=""><h1 class=" text-2xl leading-8 font-extrabold">amazing musician</h1></a>
+
+                <div class=" hidden lg:block lg:space-x-7">
+                    <a href="">
+                        <span class=" tracking-widest text-sm text-gray-navalink">CATALOGUE</span>
+                    </a>
+                    <a href="">
+                        <span class=" tracking-widest text-sm text-gray-navalink">SOUNDTRACKS</span>
+                    </a>
+                    <a href="">
+                        <span class=" tracking-widest text-sm text-gray-navalink">NEW ALBUMS</span>
+                    </a>
+                    <a href="">
+                        <span class=" tracking-widest text-sm text-gray-navalink">GENRES</span>
+                    </a>
+                </div>
+
+            <div class=" flex items-center space-x-4">
+                <span class=" material-icons">search</span>
+                <div class=" lg:hidden mt-1"><i class=" material-icons" onclick="toggler()">menu</i></div>
+                <div class=" hidden lg:block"><button class=" bg-red-sbtn font-semibold text-sm rounded-md pl-5 pr-5 pb-3 pt-3 text-white flex items-center tracking-widest"><span class=" material-icons text-gray-400">lock</span> SIGN UP</button></div>
+            </div>
+        </nav>
+
+        <div class="hidden lg:hidden mt-3" id="mobile_view">
+            <ul class=" space-y-2">
+                <li class=" tracking-widest text-sm text-gray-navalink">
+                    CATALOGUE
+                </li>
+                <li class=" tracking-widest text-sm text-gray-navalink">
+                    SOUNDTRACKS
+                </li>
+                <li class=" tracking-widest text-sm text-gray-navalink">
+                    NEW ALBUMS
+                </li>
+                <li class=" tracking-widest text-sm text-gray-navalink">
+                    GENRES
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="grid md:grid-cols-2 grid-cols-1 bg-white place-items-center">
+                    <div id="websiteDescription" class="flex flex-col justify-center align-middle p-3 md:ml-20 ml-1">
+                      <h1 class="text-3xl">Freelancing Website</h1>
+                      <p class="mt-4 text-sm">Free resource that will help nderstand thecv designc process and improve theroi
+                        nderstand.</p>
+      
+                      <ul class="mt-8 text-sm flex flex-col ml-10">
+                        <li><i class="fas fa-chevron-right"></i> HTML 5</li>
+                        <li><i class="fas fa-chevron-right"></i> CSS 3</li>
+                        <li><i class="fas fa-chevron-right"></i> Git / GitHub</li>
+                        <li><i class="fas fa-chevron-right"></i> Photoshop</li>
+                        <li><i class="fas fa-chevron-right"></i> Web Deployment</li>
+                        <li class="mt-5"><button class="p-2 bg-blue-700 rounded text-white w-full">Visit <i
+                              class="fas fa-paper-plane"></i></button></li>
+                      </ul>
+                    </div>
+      
+                    <div id="websiteImage" class="p-3">
+                      <img src="images/freelancer-portfolio-740-600.jpg" class="w-3/4 border-2 rounded-xl" />
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="grid md:grid-cols-2 grid-cols-1 bg-white place-items-center">
+                    <div id="websiteDescription" class="flex flex-col justify-center align-middle p-3 md:ml-20 ml-1">
+                      <h1 class="text-3xl">Main Home</h1>
+                      <p class="mt-4 text-sm">Free resource that will help nderstand thecv designc process and improve theroi
+                        nderstand.</p>
+      
+                      <ul class="mt-8 text-sm">
+                        <li><i class="fas fa-chevron-right"></i> HTML 5</li>
+                        <li><i class="fas fa-chevron-right"></i> CSS 3</li>
+                        <li><i class="fas fa-chevron-right"></i> Git / GitHub</li>
+                        <li><i class="fas fa-chevron-right"></i> Photoshop</li>
+                        <li><i class="fas fa-chevron-right"></i> Web Deployment</li>
+                        <li class="mt-5"><button class="p-2 bg-blue-700 rounded text-white w-full">Visit <i
+                              class="fas fa-paper-plane"></i></button></li>
+                      </ul>
+                    </div>
+      
+                    <div id="websiteImage" class="p-3">
+                      <img src="images/main-home-740-600.jpg" class="w-3/4 border-2 rounded-xl" />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </section>
+
+
+    
+<script>
+    function toggler(){
+        var mobile_view = document.getElementById('mobile_view');
+        if(mobile_view.style.display === 'none'){
+            mobile_view.style.display = 'block';
+        }
+        else{
+            mobile_view.style.display = 'none';
+        }
+    }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('.splide').mount();
+      new WOW().init();
+    });
+</script>
+</body>
+</html>
